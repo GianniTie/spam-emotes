@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="content">
+        <div class="card px-2">
+            <div class="card-body">
+                <h1 class="card-title">Spam Emotes 👀</h1>
+                <p class="card-text">Choose the emotes to spam.</p>
+                <form id="formEmotes" class="m-0">
+                    <div id="rowEmotes" class="row mb-3 justify-content-center rounded-3 bg-light py-4 m-0">
+                    </div>
+                    <div class="accordion mb-3" id="accordionOptions">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Options
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionOptions">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label class="form-label">Clicks</label>
+                                            <input type="range" name="qClicks" class="form-range" min="10" max="1000"
+                                                step="10">
+                                            <div id="qClicks">100</div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label">Time (ms)</label>
+                                            <input type="range" name="time" class="form-range" min="150" max="300"
+                                                step="50">
+                                            <div id="time"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <div id="loadingSection"
+                    class="d-flex justify-content-center align-items-center mb-3 rounded-3 bg-light d-none"
+                    style="height: 192px;">
+                    <div class="spinner-border" tyle="width: 5rem; height: 5rem;" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div id="errorSection"
+                    class="d-flex flex-column justify-content-center align-items-center mb-3 rounded-3 bg-danger d-none px-3"
+                    style="height: 192px;">
+                    <h5 class="text-center">You must be in a meet for use this extension.</h5>
+                    <p><a href="http://meet.google.com" target="_blank">Click</a> here for create
+                        one.</p>
+                </div>
+                <div class="d-flex justify-content-end rounded-3 bg-light py-2 px-3" style="gap: 10px">
+                    <button id="exitButton" type="button" class="btn btn-secondary">Exit</button>
+                    <button id="submitButton" type="button" class="btn btn-primary">Spam</button>
+                    <button id="stopButton" type="button" class="btn btn-danger d-none">Stop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Spam emotes",
+    "description": "Spam the selected emote in a meet call.",
+    "version": "1.0",
+    "icons": {
+        "16": "images/eyes_1f440.png",
+        "32": "images/eyes_1f440.png",
+        "48": "images/eyes_1f440.png",
+        "128": "images/eyes_1f440.png"
+    },
+    "action": {
+        "default_popup": "menu.html",
+        "default_icon": "images/eyes_1f440.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://meet.google.com/*"
+            ],
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage",
+        "tabs"
+    ]
+}
