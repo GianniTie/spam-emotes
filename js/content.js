@@ -1,4 +1,4 @@
-const getButtons = (name = null) => document.querySelectorAll(name ? `div[data-emoji=${name}]` : 'div[data-emoji]');
+const getButtons = (name = null) => document.querySelectorAll(name ? `img[data-emoji=${name}]` : 'img[data-emoji]');
 const getMoodButton = () => [...document.querySelectorAll('i')].find(el => el.textContent === 'mood');
 
 chrome.runtime.onMessage.addListener(function (response, sender, sendResponse) {
